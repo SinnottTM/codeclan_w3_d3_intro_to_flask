@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} - List of orders</title>
+</head>
+
+<!-- More complex HTML that arranges information, sadly couldn't get it to separate individuals items -->
+<body>
+    <h1>List of orders:</h1>
+    {% for order in orders %}
+    <div>
+        <p>
+            Customer Name: {{order.customer_name}}
+        </p>
+        <p>
+            Item: {{order.item_name}}
+        </p>
+    </div>
+    <div>
+        <p>
+            Quantity: {{order.quantity}}
+        <p>
+            Date: {{order.order_date}}
+        </p>
+        </p>
+    </div>
+    <hr>
+    {% endfor %}
+</body>
+
+</html>
